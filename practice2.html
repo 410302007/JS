@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice2</title>
+</head>
+<!-- 256559 秒為多少天、多少小時、多少分與多少秒 -->
+<body>
+    <div></div>
+    <script>
+        let total_seconds = 256559, hrs = 24, mins = 60, secs = 60 ;
+        let daysec = hrs * mins *secs, hrssec = mins * secs;
+        let hrsleft = total_seconds % daysec , minleft = hrsleft % hrssec , secleft = minleft % secs ;
+        
+        document.querySelector('div').innerHTML=`
+        256559 秒為${parseInt(total_seconds / daysec)}天、${parseInt(hrsleft / hrssec)}小時、${parseInt(minleft / secs )} 分與 ${secleft} 秒`
+    </script>
+</body>
+</html>
